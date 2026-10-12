@@ -22,13 +22,13 @@
 
 ## 3. Strategic Trade-Offs, The Cost
 
-### Trade-off 1 · _Metric A ↔ Metric B_
+### Trade-off 1 · High-Fit Recommendation Precision ↔ Discovery Coverage
 
-_We prioritize A over B because … (business justification)._
+We prioritize **high-fit recommendation precision** over maximizing the number of jobs surfaced because users need to trust that a strong-match label is worth acting on. RoleSignal can still surface unconventional or less-certain opportunities in a clearly labeled exploratory category, preserving discovery without diluting the meaning of a high-fit recommendation.
 
-### Trade-off 2 · _Metric C ↔ Metric D_
+### Trade-off 2 · Evidence-Grounded Fit Explanations ↔ Exploratory Career Insights
 
-_We prioritize C over D because … (business justification)._
+We prioritize **evidence-grounded fit explanations** over confident speculation because overstating qualifications would undermine users' career decisions and trust in RoleSignal. The product can propose non-obvious career paths, but must distinguish evidence-backed strengths from hypotheses, assumptions, and development gaps.
 
 ---
 _Generated from the AI Evaluation Strategy Canvas, M1 lab tool, AI Evals Certification._
