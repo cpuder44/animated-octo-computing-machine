@@ -7,13 +7,13 @@
 
 ## 1. Product Strategy, The Context
 
-- **Target user:** _…_
-- **Key use case:** _…_
-- **Value proposition:** _…_
+- **Target user:** Experienced professionals whose skills and career trajectories do not fit neatly into traditional job titles.
+- **Key use case:** Evaluate career opportunities against a candidate's complete professional background, including transferable experience, and explain why specific roles may be a strong fit.
+- **Value proposition:** Career-fit intelligence that surfaces potentially overlooked opportunities and provides evidence-based explanations to support career decisions.
 
 ## 2. Measurements, The Execution
 
-- **User promise.** _For [user], [product] promises to [outcome] so that [business value]._
+- **User promise.** For experienced professionals whose skills and career trajectories don't fit neatly into traditional job titles, RoleSignal promises to identify and explain high-fit career opportunities based on their complete professional background, so they can pursue roles they might otherwise overlook and make more informed career decisions.
 - **Top 3 trust metrics:**
   - **_Metric 1_**, _definition / measurable signal_
   - **_Metric 2_**, _definition / measurable signal_
