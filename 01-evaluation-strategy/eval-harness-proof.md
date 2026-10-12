@@ -104,7 +104,7 @@ Two areas require attention. Newsletter open rates declined from 42% to 35%, and
 
 The immediate priority is ensuring all campaign tracking links are added by Friday. These updates will help maintain visibility into campaign performance and upcoming activities.
 
-**Learner's winner selection:** Version A (concise executive briefing). **Reasoning:** Pending learner explanation; do not infer. **Independent judge result:** Not yet run.
+**Learner's winner selection:** Version A (concise executive briefing). **Learner's reasoning:** It communicates the same essential information more efficiently. **Independent judge result:** Not yet run.
 
 **Important limitations:** These are illustrative responses generated in one ChatGPT conversation using the two prompt instructions, not verified runs with separately installed system prompts. No independent judge has scored them; the learner selected Version A as winner, with their own justification still to be recorded. Record exact separate-system-prompt runs and learner's decision before treating this as complete experimental proof.
 
