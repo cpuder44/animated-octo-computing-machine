@@ -15,10 +15,10 @@
 
 - **User promise.** For experienced professionals whose skills and career trajectories don't fit neatly into traditional job titles, RoleSignal promises to identify and explain high-fit career opportunities based on their complete professional background, so they can pursue roles they might otherwise overlook and make more informed career decisions.
 - **Top 3 trust metrics:**
-  - **_Metric 1_**, _definition / measurable signal_
-  - **_Metric 2_**, _definition / measurable signal_
-  - **_Metric 3_**, _definition / measurable signal_
-- **Why these three:** _…_
+  - **Transferable Skill Recognition:** Recognizes relevant experience even when prior job titles or industries differ from the target role. **Measurable signal:** Percentage of expert-validated transferable skill matches correctly identified by RoleSignal in a labeled candidate–job evaluation set.
+  - **Evidence-Grounded Fit Explanations:** Supports substantive fit claims with specific information from the candidate profile and target job description, without inventing qualifications. **Measurable signal:** Percentage of substantive fit claims supported by traceable profile/job-description evidence; unsupported claims count as failures.
+  - **High-Fit Recommendation Precision:** Recommends roles genuinely worth the candidate's consideration given qualifications and practical constraints. **Measurable signal:** Percentage of top-ranked recommendations that expert reviewers judge to meet predefined fit criteria, including qualifications and practical constraints.
+- **Why these three:** These three metrics directly measure RoleSignal's core value proposition: understanding a candidate's complete professional background, explaining career fit with verifiable evidence, and translating that understanding into genuinely relevant opportunities. Together, they distinguish meaningful career intelligence from traditional keyword-based job matching.
 
 ## 3. Strategic Trade-Offs, The Cost
 
