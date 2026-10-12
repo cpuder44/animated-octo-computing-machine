@@ -65,7 +65,17 @@
 
 ## Your definition of good vs bad (golden-set criteria) — the graded part, write your own
 
-_What makes a summary genuinely good or bad for THIS product? This is the judgment call that's yours — don't copy the example._
+**Learner-confirmed decision: all three criteria are required.** A RoleSignal career-fit assessment **passes** only when all three are met:
+
+1. **Transferable skill recognition:** Identifies meaningful, relevant connections between the candidate's actual experience and target role, including non-obvious transferable capabilities where supported.
+2. **Evidence-grounded explanation:** Supports substantive claims with evidence in the candidate profile and job description; does not invent experience or qualifications.
+3. **Recommendation quality:** Appropriately distinguishes strong, exploratory and weak matches; flags material qualification gaps and uncertainty.
+
+**Failure rule:** Missing any one of these three conditions makes the assessment fail. Invented qualifications, missed clearly relevant transferable skills, or confidently recommending a weak match are failure examples.
+
+**Learner-confirmed business justification:** RoleSignal's value comes from identifying career opportunities that traditional job platforms overlook, but discovery alone isn't enough. Users need to trust that the system understands their experience, can explain its conclusions, and won't waste their time with misleading recommendations. All three dimensions are essential to delivering that promise.
+
+**Scope note:** These are RoleSignal-specific quality criteria. The Module 1 Q4 marketing-email exercise is a separate introductory test of conciseness, faithfulness and presentation; it cannot by itself validate RoleSignal career-fit quality.
 
 ## Screenshots, links or repo paths (optional if you followed the demo)
 
