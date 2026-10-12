@@ -12,7 +12,7 @@
 
 **Required Module 1 email comparison, Version A (to run in Step 5):**
 
-> You are an executive briefing assistant. Summarize the supplied Q4 marketing email in exactly 3 bullets and under 60 words. Be faithful to the source. Do not invent details.
+> You are an executive briefing assistant. Summarize in exactly 3 bullet points under 60 words. No preamble, no extra text.
 
 ## Version B, Narrative, system prompt used
 
@@ -22,7 +22,7 @@
 
 **Required Module 1 email comparison, Version B (to run in Step 5):**
 
-> You are a PR communications assistant. Summarize the supplied Q4 marketing email in about 100 words as a narrative, presenting wins first and then risks. Do not use bullets. Be faithful to the source. Do not invent details.
+> You are a PR communications assistant. Write a 100-word narrative summary highlighting wins first, then risks and next steps. Keep a positive tone. No bullets.
 
 ## Eval setup, dataset name + judge model/family
 
@@ -76,6 +76,35 @@
 **Learner-confirmed business justification:** RoleSignal's value comes from identifying career opportunities that traditional job platforms overlook, but discovery alone isn't enough. Users need to trust that the system understands their experience, can explain its conclusions, and won't waste their time with misleading recommendations. All three dimensions are essential to delivering that promise.
 
 **Scope note:** These are RoleSignal-specific quality criteria. The Module 1 Q4 marketing-email exercise is a separate introductory test of conciseness, faithfulness and presentation; it cannot by itself validate RoleSignal career-fit quality.
+
+### Q4 marketing email comparison — generated in ChatGPT (not independent judge scored)
+
+**User message / source email:**
+
+> Summarize this email for the CEO.  
+> Subject: Q4 Marketing Campaign Update  
+> Hi team,  
+> Social media engagement is up 25% month-over-month due to the new content calendar and paid ad experiments.  
+> Newsletter open rate dropped from 42% to 35%; we'll test new subject lines next week.  
+> The product video campaign is delayed until November, pending legal approval; creative assets are ready.  
+> Please ensure all campaign tracking links are added by Friday.  
+> Best, Priya
+
+**Version A output:**
+
+- Social engagement increased 25% month-over-month, driven by the new content calendar and paid ad experiments.
+- Newsletter open rates declined from 42% to 35%; new subject lines will be tested next week.
+- Product video launch is delayed until November pending legal approval; creative assets are ready. All campaign tracking links are due Friday.
+
+**Version B output:**
+
+Q4 marketing activity is showing encouraging momentum. Social media engagement increased 25% month-over-month, supported by the new content calendar and paid advertising experiments. This progress provides a positive signal for the team's campaign approach.
+
+Two areas require attention. Newsletter open rates declined from 42% to 35%, and the team plans to test new subject lines next week. The product video campaign has also been delayed until November pending legal approval, although creative assets are ready.
+
+The immediate priority is ensuring all campaign tracking links are added by Friday. These updates will help maintain visibility into campaign performance and upcoming activities.
+
+**Important limitations:** These are illustrative responses generated in one ChatGPT conversation using the two prompt instructions, not verified runs with separately installed system prompts. No independent judge has scored them; the learner has not yet selected the winner. Record exact separate-system-prompt runs and learner's decision before treating this as complete experimental proof.
 
 ## Screenshots, links or repo paths (optional if you followed the demo)
 
