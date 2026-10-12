@@ -108,6 +108,29 @@ The immediate priority is ensuring all campaign tracking links are added by Frid
 
 **Important limitations:** These are illustrative responses generated in one ChatGPT conversation using the two prompt instructions, not verified runs with separately installed system prompts. No independent judge has scored them; the learner selected Version A as winner, with their own justification still to be recorded. Record exact separate-system-prompt runs and learner's decision before treating this as complete experimental proof.
 
+### Learner-run A/B comparison (submitted outputs)
+
+**Run provenance:** Learner pasted outputs from separate A/B runs. System-role configuration and model identity are learner-reported, not independently verifiable here. The original email and exact A/B prompts are recorded above.
+
+**Version A, learner-submitted (verbatim, Markdown line structure preserved):**
+
+```markdown
+**Social media engagement increased 25% month-over-month**, driven by the new content calendar and paid advertising experiments.
+
+1. **Newsletter open rates declined from 42% to 35%.** New subject lines will be tested next week to improve performance.
+2. **Product video campaign delayed until November**, pending legal approval. Creative assets are ready; all campaign tracking links must be finalized by Friday.
+```
+
+**Version B, learner-submitted (verbatim):**
+
+> Q4 marketing is showing encouraging momentum, with social media engagement rising 25% month over month. The new content calendar and paid advertising experiments are delivering measurable results, reinforcing the team's strategy. Some areas need attention: newsletter open rates declined from 42% to 35%, and the product video campaign has shifted to November while legal approval remains pending. Importantly, video creative assets are complete, positioning the campaign to launch once cleared. Next week, the team will test fresh newsletter subject lines to improve performance. All campaign tracking links must be in place by Friday to ensure accurate measurement across all channels.
+
+**Descriptive checks (not an independent LLM judge):**
+- A: 59 whitespace-separated words (including Markdown numbering); below 60. Preserves social +25%, newsletter 42% → 35%, video November/legal status, creative readiness, subject-line testing, Friday tracking deadline. **Format violation:** output contains an unnumbered standalone paragraph followed by a numbered list of two items, rather than exactly three bullet points.
+- B: 100 whitespace-separated words, narrative without bullets, approximately 100 words. Preserves the same essential figures, risks and next steps; contains positive interpretive phrasing (e.g. strategy reinforced) that is not directly evidenced by the email.
+- **Learner's preferred version:** A, because it communicates the same essential information more efficiently. This is a human preference, **not** a clean format-compliance win: A fails the exact three-bullet constraint.
+- **Independent cross-family judge:** Not run (optional). **Proof:** verbatim learner-submitted outputs above; no screenshots attached.
+
 ## Screenshots, links or repo paths (optional if you followed the demo)
 
 _2 shots: (1) eval setup (dataset + judge), (2) starter rows. Image links, or paths under `01-evaluation-strategy/screenshots/`._
