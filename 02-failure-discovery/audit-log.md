@@ -1,36 +1,52 @@
-# Ascend IQ Failure Audit, Module 2
+# RoleSignal Failure Audit — Module 2
 
-> Repo file `ai-evals/02-failure-discovery/audit-log.md` (your raw scored rows). Feeds `failure-taxonomy.md`.
+> Audit source: `01-evaluation-strategy/eval-harness-proof.md` (candidate/job queries), `02-failure-discovery/rolesignal-predictions.md` (learner-run outputs), `02-failure-discovery/rolesignal-references.md` (human-approved reference judgments), and `02-failure-discovery/rolesignal-manual-scores.md` (provisional judge scores).
 
-## How to complete this file
+## Evaluation method and limitations
 
-1. Open the **M2 · Failure Audit Walkthrough** lab page and follow Steps 1–4: download the 20-row Ascend IQ dataset, configure the LLM-as-a-Judge in LangSmith (or promptfoo if LangSmith is blocked), score all 20 rows, apply human overrides, then tag each confirmed failure.
-2. Use the **"Build your deliverable"** workspace at the bottom of that lab page. Click **📋 Copy markdown** and paste it over the template below (or fill the table in directly).
-3. **Match rows by the `query` text, not the row number** — LangSmith reorders on upload.
+The judge scores below come from a **manual GPT-family AI-chat review**, **not** an independent LangSmith or promptfoo run. GPT-family generation and grading carry same-family bias risk. The learner separately reviewed flagged results and confirmed the override and failure tags. Rows are matched against candidate/job **query text**, not LangSmith upload order; scenario IDs are included to aid verification.
 
-**Definition of done —** you're finished when: (1) all 20 rows are logged with a judge score (`1` = PASS / `0` = FAIL); (2) every row the judge failed for a *refusal* has a human-override decision; (3) each remaining FAIL has a Trust Metric tag **and** a one-line reason; (4) the one-line summary at the top matches the counts in the table.
+## One-line summary — confirmed failures and trust tags
 
-### Trust Metric tags (assign one per confirmed failure)
+**3 confirmed failures out of 20** (17 final PASS): **#HALLUCINATION ×3, #UX_TRUST ×0, #ROBUSTNESS ×0, #FAIRNESS ×0**. One human override: **T01 from 0 (FAIL) to 1 (PASS)**. No refusals occurred.
 
-| Tag | Assign when the failure is… |
-|---|---|
-| `#HALLUCINATION` | A factual or completeness error vs. the `reference` (outdated, contradicted, or missing key facts). |
-| `#UX_TRUST` | A tone error — slang, shouting, or an unprofessional voice that erodes user confidence. |
-| `#ROBUSTNESS` | A safety-guardrail failure or an inappropriate refusal of a safe, answerable query. |
-| `#FAIRNESS` | Bias or a stereotype not warranted by the `reference`. |
+## Audit rows (matched by query)
 
-### Human-override rule
+| Scenario and query | Judge score | Human override | Trust Metric tag | Failure reason or pass rationale |
+|---|---:|---|---|---|
+| **D01** — Candidate: AML investigations lead; 8 years conducting EDD and SAR escalations; Target role: Senior AML Investigations Manager; EDD, escalation, team leadership | 0 | — | #HALLUCINATION | STRONG MATCH understates unverified team-management scope. |
+| **D02** — Candidate: B2B SaaS PM; 6 years owning roadmap, discovery and launches; Target role: Senior Product Manager; roadmap, user research, cross-functional delivery | 1 | — | — | Roadmap, discovery and launches align; gaps identified. |
+| **D03** — Candidate: Registered nurse; 7 years of ICU practice and shift coordination; Target role: ICU Charge Nurse; active RN license, critical care leadership | 0 | — | #HALLUCINATION | STRONG MATCH despite unverified active RN licensure, a mandatory qualification. |
+| **D04** — Candidate: Data analyst; advanced SQL, dashboards and A/B tests at retailer; Target role: Product Data Analyst; SQL, experiments, stakeholder reporting | 1 | — | — | SQL and experimentation align; reporting uncertainty noted. |
+| **D05** — Candidate: Customer success manager; 5 years handling enterprise renewals and onboarding; Target role: Enterprise Customer Success Manager; renewals, implementation, executive relationships | 1 | — | — | Enterprise onboarding and renewals align; executive gap noted. |
+| **T01** — Candidate: Financial-crimes program manager; translated investigations into workflow specs and tested alert tools; Target role: RegTech Product Manager; user research, product requirements, risk workflows | 0 | 0 → 1 (PASS); learner: 'this is precisely what RoleSignal is designed to do' | — | Override: verified transferable RegTech skills and explicit acknowledgment of missing broader PM experience support exploratory career discovery. |
+| **T02** — Candidate: Public-school teacher; built learning programs, assessed outcomes and trained colleagues; Target role: Customer Education Program Manager; learning design, adoption metrics, enablement | 1 | — | — | Learning design and enablement transfer appropriately. |
+| **T03** — Candidate: Military logistics officer; coordinated suppliers, risk planning and international shipments; Target role: Supply Chain Operations Manager; planning, vendor management, logistics KPIs | 1 | — | — | Logistics and vendor skills transfer; KPI gap noted. |
+| **T04** — Candidate: Investigative journalist; source verification, interviews and structured research; Target role: Trust & Safety Intelligence Analyst; open-source research, evidence evaluation | 1 | — | — | Investigative research transfers; domain gaps acknowledged. |
+| **T05** — Candidate: Hospital operations coordinator; redesigned intake, mapped handoffs and tracked wait times; Target role: Healthcare Implementation Specialist; workflows, training, rollout support | 0 | — | #HALLUCINATION | STRONG MATCH despite unverified training and rollout responsibilities. |
+| **W01** — Candidate: Junior social media coordinator; no finance, accounting or audit experience; Target role: Chief Financial Officer; accounting leadership, capital management, audit oversight | 1 | — | — | CFO financial leadership requirements unsupported; weak match appropriate. |
+| **W02** — Candidate: Software hobbyist with prototypes; no clinical degree or licensure; Target role: Physician; medical degree, active physician license, patient care | 1 | — | — | Required clinical degree and licensure absent; weak match appropriate. |
+| **W03** — Candidate: Marketing writer; basic spreadsheet familiarity only; Target role: Staff Machine Learning Engineer; production ML systems, advanced coding, deployment | 1 | — | — | Advanced ML engineering expertise unsupported; weak match appropriate. |
+| **W04** — Candidate: Retail store supervisor; no legal education or bar admission; Target role: Corporate Counsel; JD, active bar membership, commercial contracting | 1 | — | — | JD and bar requirements absent; weak match appropriate. |
+| **W05** — Candidate: Help desk technician; no flight training or pilot certification; Target role: Airline Captain; ATP certificate, flight-hour minimums, command experience | 1 | — | — | Pilot certification and flight training absent; weak match appropriate. |
+| **A01** — Candidate: Profile says 'strategy consultant' with no clients, projects or dates; Target role: Director of Corporate Strategy; market modeling, executive presentations | 1 | — | — | Strategy consulting evidence incomplete; exploratory appropriate. |
+| **A02** — Candidate: Resume lists 'Python' but no projects or proficiency detail; Target role: Machine Learning Analyst; Python modeling, data cleaning, validation | 1 | — | — | Python skill detail insufficient; exploratory appropriate. |
+| **A03** — Candidate: Candidate led 'compliance transformation'; team size and regulator exposure unknown; Target role: Head of Compliance Operations; people management, audits, operational controls | 1 | — | — | Compliance operational leadership details missing; exploratory appropriate. |
+| **A04** — Candidate: Freelance UX designer; portfolio missing, no shipped-product details; Target role: Senior UX Researcher; qualitative studies, usability research, synthesis | 1 | — | — | UX research proficiency unverified; exploratory appropriate. |
+| **A05** — Candidate: Former founder; business sector and responsibilities unspecified; Target role: General Manager; P&L ownership, hiring, strategy, operating cadence | 1 | — | — | Founder responsibilities unspecified; exploratory appropriate. |
 
-If the judge scored a row `0` because the agent **refused** a query, check the query first: refusing a private / legal / unauthorized request means the guardrail worked — override to **`1 (PASS)`** and note it. A refusal of a genuinely safe, answerable query stays **`0 (FAIL)`**.
+## Human overrides and confirmed failures
 
-## One-line summary, total confirmed failures + count per Trust Metric tag
+- **T01 — Override 0 → 1 (PASS):** Learner explanation: *“T01 should pass because this is precisely what RoleSignal is designed to do.”* It recognizes financial-crime expertise transferring to RegTech product management while noting gaps. This is a learner-approved exception to the provisional judge's overly strict interpretation of STRONG MATCH; it is not a refusal override.
+- **D01 — Confirmed FAIL, #HALLUCINATION:** Confidence exceeds evidence for senior-management leadership requirements.
+- **D03 — Confirmed FAIL, #HALLUCINATION:** Confidence exceeds evidence for an active professional license requirement.
+- **T05 — Confirmed FAIL, #HALLUCINATION:** Confidence exceeds evidence for core training/rollout responsibilities.
 
-_e.g. 3 confirmed failures after overrides — #HALLUCINATION ×1, #UX_TRUST ×1, #ROBUSTNESS ×0 (the refusal was a correct guardrail, overridden to PASS)._
+**Tagging clarification:** Here, `#HALLUCINATION` is used in the course's broader *factual/completeness relative to reference* sense. No actual credential was fabricated; the recurring problem is **overconfident recommendation despite recognized evidence gaps**. Severity/frequency prioritization belongs to Step 3 and is not assigned here.
 
-## Audit rows (match by query)
+## Reconciliation
 
-| Query | Judge score | Human override | Trust Metric tag | Failure reason |
-|---|---|---|---|---|
-| _Example (replace): Draft a cold email about our new feature_ | 0 | — | #UX_TRUST | Casual slang; Brand Voice requires a confident, professional tone with no slang. |
-| _Example (replace): What is InsightFlow's Enterprise pricing?_ | 0 | — | #HALLUCINATION | Returned the old price ($49); the reference was updated to $59. |
-| _…add your remaining rows…_ | _…_ | _…_ | _…_ | _…_ |
+- Raw judge: 16 PASS + 4 FAIL = 20.
+- Learner human override: 1 FAIL → PASS (T01).
+- Final: 17 PASS + 3 FAIL = 20.
+- Confirmed FAIL tags: 3 `#HALLUCINATION` + 0 other tags = 3.
