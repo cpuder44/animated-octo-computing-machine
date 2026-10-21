@@ -1,0 +1,81 @@
+"id","query","prediction","reference"
+"D01","Candidate: AML investigations lead; 8 years conducting EDD and SAR escalations
+Target role: Senior AML Investigations Manager; EDD, escalation, team leadership","- **Strengths:** 8 years in AML investigations, including EDD and SAR escalations, directly aligns with core investigative and escalation requirements.
+- **Gaps/uncertainty:** “Investigations lead” suggests leadership responsibility, but specific team-management scope is not provided.
+- **Recommendation: STRONG MATCH** — Substantial directly relevant AML, EDD, and escalation experience; leadership scope should be validated.","Expected: EXPLORATORY. Strong AML, EDD and SAR experience, but team-management evidence is insufficient for a senior manager requirement."
+"D02","Candidate: B2B SaaS PM; 6 years owning roadmap, discovery and launches
+Target role: Senior Product Manager; roadmap, user research, cross-functional delivery","- **Strengths:** 6 years as a B2B SaaS PM owning roadmap, discovery, and launches directly supports senior product-management responsibilities.
+- **Gaps/uncertainty:** User research is not explicitly stated, although discovery experience is relevant; cross-functional delivery details are not provided.
+- **Recommendation: STRONG MATCH** — Demonstrated ownership of core PM functions closely matches the role.","Expected: STRONG MATCH. Six years of product roadmap ownership, discovery and launches directly support senior PM responsibilities."
+"D03","Candidate: Registered nurse; 7 years of ICU practice and shift coordination
+Target role: ICU Charge Nurse; active RN license, critical care leadership","- **Strengths:** 7 years of ICU practice plus shift coordination provides directly relevant critical-care experience and evidence of operational leadership.
+- **Gaps/uncertainty:** Active RN licensure is required but current license status is not explicitly provided.
+- **Recommendation: STRONG MATCH** — Strong ICU and coordination experience, subject to confirming active RN licensure and leadership expectations.","Expected: EXPLORATORY. Seven years of ICU experience and shift coordination are relevant, but active RN licensure must be verified."
+"D04","Candidate: Data analyst; advanced SQL, dashboards and A/B tests at retailer
+Target role: Product Data Analyst; SQL, experiments, stakeholder reporting","- **Strengths:** Advanced SQL, dashboard development, and A/B testing directly align with product analytics, experimentation, and reporting requirements.
+- **Gaps/uncertainty:** Stakeholder reporting experience is implied by dashboard work but not explicitly described.
+- **Recommendation: STRONG MATCH** — The candidate demonstrates the primary technical and experimentation capabilities required.","Expected: STRONG MATCH. SQL, dashboards and A/B testing directly satisfy the role's central analytics and experimentation needs."
+"D05","Candidate: Customer success manager; 5 years handling enterprise renewals and onboarding
+Target role: Enterprise Customer Success Manager; renewals, implementation, executive relationships","- **Strengths:** 5 years managing enterprise renewals and onboarding directly aligns with customer retention and implementation responsibilities.
+- **Gaps/uncertainty:** Executive relationship management is not explicitly demonstrated.
+- **Recommendation: STRONG MATCH** — Strong direct alignment on enterprise customer success, with executive-level relationship experience needing confirmation.","Expected: STRONG MATCH. Enterprise renewals and onboarding provide substantial direct customer-success alignment; executive relationships need confirmation."
+"T01","Candidate: Financial-crimes program manager; translated investigations into workflow specs and tested alert tools
+Target role: RegTech Product Manager; user research, product requirements, risk workflows","- **Strengths:** Translating investigations into workflow specifications and testing alert tools demonstrates transferable product requirements, domain workflows, and product-validation experience.
+- **Gaps/uncertainty:** Formal user research and broader product ownership responsibilities are not explicitly provided.
+- **Recommendation: STRONG MATCH** — Deep financial-crimes workflow knowledge combined with requirements and tool-testing experience transfers strongly into RegTech product management.","Expected: EXPLORATORY. Financial-crimes workflow specifications and alert-tool testing transfer well to RegTech PM, but broader product ownership and user research are unverified."
+"T02","Candidate: Public-school teacher; built learning programs, assessed outcomes and trained colleagues
+Target role: Customer Education Program Manager; learning design, adoption metrics, enablement","- **Strengths:** Building learning programs, assessing outcomes, and training colleagues transfers directly to learning design, enablement, and measurement.
+- **Gaps/uncertainty:** Customer-facing education and explicit adoption-metric ownership are not demonstrated.
+- **Recommendation: STRONG MATCH** — The core capabilities underlying education-program management are clearly demonstrated in a transferable setting.","Expected: STRONG MATCH. Designing educational programs, measuring outcomes and training colleagues demonstrate core learning-design and enablement capabilities."
+"T03","Candidate: Military logistics officer; coordinated suppliers, risk planning and international shipments
+Target role: Supply Chain Operations Manager; planning, vendor management, logistics KPIs","- **Strengths:** Supplier coordination, risk planning, and international shipment management directly transfer to vendor management, planning, and logistics operations.
+- **Gaps/uncertainty:** Experience defining or owning logistics KPIs is not explicitly provided.
+- **Recommendation: STRONG MATCH** — Operational logistics and supplier-management experience substantially overlaps with the target role.","Expected: STRONG MATCH. Supplier coordination, risk planning and international shipments directly transfer to supply chain operations."
+"T04","Candidate: Investigative journalist; source verification, interviews and structured research
+Target role: Trust & Safety Intelligence Analyst; open-source research, evidence evaluation","- **Strengths:** Source verification, interviewing, and structured investigation provide strong transferable capabilities for open-source research and evidence evaluation.
+- **Gaps/uncertainty:** Trust & Safety domain experience and specific OSINT tools or methodologies are not stated.
+- **Recommendation: STRONG MATCH** — The candidate demonstrates the core investigative and evidence-assessment skills required, despite a different domain background.","Expected: STRONG MATCH. Source verification, interviewing and structured research strongly support intelligence research and evidence assessment."
+"T05","Candidate: Hospital operations coordinator; redesigned intake, mapped handoffs and tracked wait times
+Target role: Healthcare Implementation Specialist; workflows, training, rollout support","- **Strengths:** Redesigning intake, mapping handoffs, and tracking wait times demonstrates strong workflow analysis and implementation-oriented operational improvement.
+- **Gaps/uncertainty:** Training delivery and direct rollout-support experience are not explicitly stated.
+- **Recommendation: STRONG MATCH** — Relevant healthcare workflow expertise transfers well, with training and rollout responsibilities requiring confirmation.","Expected: EXPLORATORY. Healthcare workflow redesign is highly relevant, but training and rollout-support experience are unverified."
+"W01","Candidate: Junior social media coordinator; no finance, accounting or audit experience
+Target role: Chief Financial Officer; accounting leadership, capital management, audit oversight","- **Strengths:** Social-media coordination may provide general communication and organizational experience.
+- **Gaps/uncertainty:** No evidence is provided for accounting leadership, capital management, audit oversight, or related finance experience.
+- **Recommendation: WEAK MATCH** — The supplied evidence does not demonstrate the core financial leadership capabilities required for a CFO role.","Expected: WEAK MATCH. No demonstrated accounting, finance or audit background for a CFO role."
+"W02","Candidate: Software hobbyist with prototypes; no clinical degree or licensure
+Target role: Physician; medical degree, active physician license, patient care","- **Strengths:** Building software prototypes demonstrates technical initiative but does not directly address clinical practice requirements.
+- **Gaps/uncertainty:** No evidence is provided for a medical degree, physician licensure, or patient-care experience.
+- **Recommendation: WEAK MATCH** — The profile provides no demonstrated evidence for the mandatory clinical qualifications of a physician.","Expected: WEAK MATCH. Explicit absence of the required clinical degree and physician licensure."
+"W03","Candidate: Marketing writer; basic spreadsheet familiarity only
+Target role: Staff Machine Learning Engineer; production ML systems, advanced coding, deployment","- **Strengths:** Marketing writing may contribute communication skills, and basic spreadsheet familiarity provides limited exposure to structured data.
+- **Gaps/uncertainty:** No evidence is provided for advanced coding, production ML systems, model development, or deployment experience.
+- **Recommendation: WEAK MATCH** — The demonstrated background does not align materially with the advanced technical requirements of a Staff ML Engineer.","Expected: WEAK MATCH. No demonstrated advanced programming, production ML or engineering capabilities."
+"W04","Candidate: Retail store supervisor; no legal education or bar admission
+Target role: Corporate Counsel; JD, active bar membership, commercial contracting","- **Strengths:** Retail supervision demonstrates general operational and people-coordination experience.
+- **Gaps/uncertainty:** No evidence is provided for a JD, active bar membership, legal practice, or commercial contracting experience.
+- **Recommendation: WEAK MATCH** — The profile does not demonstrate the professional credentials or legal expertise required for Corporate Counsel.","Expected: WEAK MATCH. Explicit absence of legal education and bar admission."
+"W05","Candidate: Help desk technician; no flight training or pilot certification
+Target role: Airline Captain; ATP certificate, flight-hour minimums, command experience","- **Strengths:** Help-desk work may demonstrate troubleshooting and procedural discipline, but these skills have limited relevance to aircraft command.
+- **Gaps/uncertainty:** No evidence is provided for flight training, ATP certification, required flight hours, or command experience.
+- **Recommendation: WEAK MATCH** — The candidate lacks demonstrated evidence for the specialized qualifications central to an Airline Captain role.","Expected: WEAK MATCH. Explicit absence of pilot training and certification."
+"A01","Candidate: Profile says 'strategy consultant' with no clients, projects or dates
+Target role: Director of Corporate Strategy; market modeling, executive presentations","- **Strengths:** The “strategy consultant” title may indicate potentially relevant strategic experience.
+- **Gaps/uncertainty:** No clients, projects, dates, market-modeling work, or executive-presentation experience are provided.
+- **Recommendation: EXPLORATORY** — The title suggests possible alignment, but there is insufficient evidence to establish readiness for Director-level corporate strategy.","Expected: EXPLORATORY. Strategy-consulting title suggests possible relevance, but no evidence of market modeling or executive presentations."
+"A02","Candidate: Resume lists 'Python' but no projects or proficiency detail
+Target role: Machine Learning Analyst; Python modeling, data cleaning, validation","- **Strengths:** Python is explicitly listed and is relevant to the technical foundation of the role.
+- **Gaps/uncertainty:** No evidence establishes Python proficiency, modeling experience, data cleaning, validation, or completed projects.
+- **Recommendation: EXPLORATORY** — There is a potentially relevant technical signal, but insufficient evidence to determine capability against the role requirements.","Expected: EXPLORATORY. Python is relevant, but proficiency and machine-learning work are unverified."
+"A03","Candidate: Candidate led 'compliance transformation'; team size and regulator exposure unknown
+Target role: Head of Compliance Operations; people management, audits, operational controls","- **Strengths:** Leading a “compliance transformation” indicates potentially relevant change leadership within the compliance domain.
+- **Gaps/uncertainty:** People-management scope, audit experience, regulator exposure, and responsibility for operational controls are unspecified.
+- **Recommendation: EXPLORATORY** — The experience could be highly relevant, but critical evidence needed for a Head of Compliance Operations role is missing.","Expected: EXPLORATORY. Compliance transformation leadership may transfer, but people management, audits and control ownership remain unspecified."
+"A04","Candidate: Freelance UX designer; portfolio missing, no shipped-product details
+Target role: Senior UX Researcher; qualitative studies, usability research, synthesis","- **Strengths:** Freelance UX design provides potentially transferable exposure to user-centered design and customer needs.
+- **Gaps/uncertainty:** No portfolio or evidence of qualitative studies, usability research, research synthesis, or shipped products is provided.
+- **Recommendation: EXPLORATORY** — The UX background warrants investigation, but the supplied evidence does not establish senior UX research capability.","Expected: EXPLORATORY. Freelance UX experience may be relevant, but research methods and senior-level evidence are absent."
+"A05","Candidate: Former founder; business sector and responsibilities unspecified
+Target role: General Manager; P&L ownership, hiring, strategy, operating cadence","- **Strengths:** Founder experience may involve strategy and operating responsibilities relevant to general management.
+- **Gaps/uncertainty:** The business sector and evidence of P&L ownership, hiring, strategy execution, and operating cadence are unspecified.
+- **Recommendation: EXPLORATORY** — Founder experience could map strongly to general management, but the available profile is too incomplete to verify the required scope.","Expected: EXPLORATORY. Founder experience could transfer to general management, but P&L, hiring and operating responsibilities are unverified."
