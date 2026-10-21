@@ -39,10 +39,10 @@
 
 ## #1 Risk · Business Impact Statement
 
-> _Template: "This failure matters because [technical error] results in [business consequence]." Name the concrete cost — revenue, churn, legal, or trust — not the bug._
+> This failure matters because recommending candidates as strong matches for roles requiring unverified mandatory credentials undermines confidence in RoleSignal's career-fit intelligence, creating serious reputational risk and potentially driving user abandonment.
 
 ## Defending the Prioritization
 
-- _Why the #1 risk is P0 (severity), independent of how often it happens._
-- _Frequency threshold: ≥3 of 20 = HIGH._
-- _Severity anchored to the trust metrics you chose in the Module 1 Strategy Canvas._
+- **Core promise at risk:** RoleSignal's value depends on distinguishing demonstrated qualifications from missing or unverified requirements. Failing that distinction undermines evidence-grounded career intelligence.
+- **Severity over frequency:** This specific mandatory-credential failure appeared in only 1 of 20 test cases (LOW frequency), but a misleading recommendation involving mandatory professional credentials can cause disproportionate reputational harm; that potential impact supports the learner's P0 designation. The broader overconfidence mechanism appeared in 3 of 20 cases (HIGH aggregate frequency).
+- **Commercial implications:** If users stop trusting strong-match recommendations, they may disengage from the platform, decline to subscribe, or discourage others from using it. These are potential business consequences, not measured churn or revenue outcomes.
