@@ -29,10 +29,13 @@
 
 | Rank | Failure Type | Trust Tag | Agentic Mode | Frequency | Severity | Business Impact |
 |---|---|---|---|---|---|---|
-| _Example (replace): 1_ | _Fabricated Pricing_ | _#HALLUCINATION_ | _output-level_ | _4/20_ | _P0_ | _Contract disputes; blocks Enterprise renewals._ |
-| 1 | _…_ | _…_ | _…_ | _…/20_ | _P0–P3_ | _…_ |
-| 2 | _…_ | _…_ | _…_ | _…/20_ | _P0–P3_ | _…_ |
-| 3 | _…_ | _…_ | _…_ | _…/20_ | _P0–P3_ | _…_ |
+| 1 | D03 — Strong-match recommendation with unverified mandatory RN licensure | `#HALLUCINATION` | Output-level (none) | 1/20 · LOW | **P0** | Potential serious reputational harm from overstating eligibility for a credential-dependent role; users may lose confidence and trust in RoleSignal. |
+| 2 | D01 — Overstated senior-management readiness with unverified team-leadership scope | `#HALLUCINATION` | Output-level (none) | 1/20 · LOW | **P1** | Misleading strong-match recommendations for leadership roles could waste users' effort and erode confidence in the product. |
+| 3 | T05 — Overconfident transferable-skill match despite unverified training and rollout experience | `#HALLUCINATION` | Output-level (none) | 1/20 · LOW | **P1** | Overstating readiness for a career transition could weaken trust in RoleSignal's core transferable-skills promise. |
+
+**Prioritization rationale (learner-confirmed):** All three errors risk reputational harm and users losing faith and trust in the product. Mandatory-credential uncertainty is the highest priority due to its potentially serious reputational consequences.
+
+**Frequency note:** Each distinct failure type occurred once (LOW, 1/20). Their common mechanism, overconfident recommendations despite acknowledged evidence gaps, occurred 3/20 (HIGH in aggregate); that aggregate is not the individual failure-type frequency.
 
 ## #1 Risk · Business Impact Statement
 
