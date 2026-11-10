@@ -1,17 +1,17 @@
-# Ship/Hold Memo · Ascend IQ
+# Ship/Hold Memo · RoleSignal
 
 > Repo file `ai-evals/06-culture/lab-1-ship-hold-memo.md`. A Pyramid-Principle executive memo: the recommendation comes **first**.
 >
-> Fill this with the **Ship/Hold Memo Builder**, then **Copy markdown** and paste it over this file. The headings below mirror the tool's output exactly.
+> Module 6 capstone for RoleSignal. Step 1 records the learner's launch decision; evidence and business-risk analysis remain for later steps.
 
-> **Decision:** 🚀 SHIP _(or 🛑 HOLD)_
+> **Decision:** 🛑 **HOLD** the next broad release of RoleSignal matching changes
 
-**To:** _[CPO] · cc Eng Lead · Trust & Safety_
-**From:** _[Your Name] · AI Evals Cohort · [Date]_
+**To:** Product Leadership · **cc:** Engineering Lead; Trust & Safety
+**From:** RoleSignal Product Owner · November 10, 2026
 
 ## The Answer
 
-_First sentence = the recommendation and the business reason. Do not bury it._
+**HOLD the next broad release of RoleSignal matching changes because the mandatory-credential risk needs a validated blocking control before expanding the release.** This decision concerns broader release of matching changes, not a claim that RoleSignal's existing product or all current scenarios have failed.
 
 ## The Arguments
 
