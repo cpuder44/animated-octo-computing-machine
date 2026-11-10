@@ -31,10 +31,22 @@ This is a **HOLD on the next broad release of matching changes**, not a recommen
 
 ## Evidence · Trust Metrics
 
-```
-- Metric: result (Gate: bar) PASS/FAIL · Source
-- … cite exact numbers from M2–M5 (hallucination rate vs gate, factual grounding %, bias coverage %, p95 latency)
-```
+**Decision-relevant evidence, with explicit source and gate status.** These six measures cover different datasets and evaluation modes; they are **not** one combined pass rate. `UNVERIFIED` means no valid result against the stated release gate has been demonstrated, not that the system necessarily fails it.
+
+| Metric | Recorded result | Gate / decision bar | Status | Source and evidence type |
+|---|---|---|---|---|
+| **Manual career-fit accuracy / overconfidence** | **17/20 PASS (85%); 3/20 FAIL (15%)** after the learner's T01 override. D01, D03 and T05 were overconfident STRONG MATCH assessments; no credential was fabricated. | **No retrospective 20-case pass-rate floor was approved.** The later D03/D01/T05 gates are targeted and require separate labeled suites. | **3 confirmed failures; no global gate verdict** | [M2 failure audit](../02-failure-discovery/audit-log.md), human-reviewed manual GPT-family chat evaluation; **RoleSignal case evidence** |
+| **D03 mandatory-credential detection** | Adapted deterministic eligibility check caught **1/1 known D03 P0 case**. A separate simplistic unsupported-claim detector missed it (**0/1**); the live LLM judge **was not run**. | **Hard PR target: 100% catches on the defined mandatory-credential regression suite**, including varied verified/unverified/absent cases and controls. | **UNVERIFIED for release**: one prototype catch is not a validated suite or deployed PR gate | [M3 three-layer eval](../03-eval-suites/lab-1-eval-suite.md); [M4 release criteria](../04-eval-gates/lab-2-launch-strategy.md); **single-case prototype + proposed gate** |
+| **Newer RoleSignal scenario checks** | **8/8 reported “All passed”** on **November 6, 2026**, including a missing-hard-requirement calibration scenario. | **Eight configured scenario checks**; underlying assertions and equivalence to the complete D03 gate **not established**. | **PASS on reported scenarios only; broader release UNVERIFIED** | [M5 coverage matrix](../05-scale/lab-1-coverage-matrix.md), learner-supplied scenario-run screenshot; **RoleSignal scenario-run evidence** |
+| **Judge calibration / grounding** | **Cohen's κ = 0.67**, with **10/12 agreement (83.33%)** on course baked-in demo labels. | **Course calibration gate κ ≥ 0.60**. | **PASS for course demo only**; no independently re-run RoleSignal judge validation | [M3 judge calibration](../03-eval-suites/lab-judge-calibration.md); **course demo, not live RoleSignal performance** |
+| **Faithfulness regression, PR #218** | **96 → 87 (−9 points)** on the course's 30-case simulated replay. | **Blocking floor ≥90; max 3-point regression**. | **FAIL / BLOCK in course simulation**; **not** a real RoleSignal PR or live CI result | [M4 CI gate policy](../04-eval-gates/lab-ci-gate-policy.md); **simulated course replay** |
+| **Fairness evaluation coverage** | **❌ No demonstrated fairness testing**; Bias was one of **3/5 coverage gaps** in M5 (alongside Toxicity and Drift Monitoring). | **Critical mitigation assigned to Product owner + Engineering by December 15, 2026**; no measured fairness acceptance threshold yet. | **UNVERIFIED / coverage GAP**; no numeric bias rate established | [M5 coverage matrix](../05-scale/lab-1-coverage-matrix.md); **coverage audit and dated mitigation commitment** |
+
+**Decision interpretation:** The **HOLD** rests on the confirmed D03 P0 failure and **absence of evidence that the 100% mandatory-credential regression gate is deployed and validated**. The 8/8 passing scenarios are favorable, but do not override that missing release assurance. The simulated PR #218 grounding failure is a policy demonstration, **not an additional observed RoleSignal failure**. The κ result validates only the course's demo judge labels.
+
+**Supporting scale and budget context (not a seventh trust metric):** The [M5 budget decision](../05-scale/lab-2-budget-crisis.md) allocated **$154,750 of the $200,000 quarterly exercise cap**, including **$85,000 L3 for Hallucination** and **$55,000 L3 for Bias**, using **2/3 Level-3 slots**, with **$45,250 unallocated**. These are **course-budget allocations, not actual expenditure**. The supplied eight recorded scenario durations span **6.6–16.9 seconds**; **no approved RoleSignal latency threshold or validated p95** exists, so no latency PASS/FAIL is asserted.
+
+**Learner-selected evidence package and rationale:** Full six-metric table, with simulation and deployment limitations labeled; “The judge-calibration result and evaluation budget can provide supporting context without distracting from the central decision.”
 
 ## Business Risk
 
