@@ -1,22 +1,161 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Final Pitch Deck — placeholder</title>
-  <style>
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; background:#07162C; color:#e8eefc; margin:0; display:grid; place-items:center; min-height:100vh; }
-    .card { max-width:640px; padding:40px; line-height:1.6; }
-    h1 { font-size:22px; margin:0 0 12px; }
-    code { background:rgba(255,255,255,0.08); padding:2px 6px; border-radius:4px; font-size:13px; }
-    a { color:#8ec5ff; }
-  </style>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>RoleSignal | AI Evaluation Release Decision | Product School Capstone</title>
+<style>
+:root{--ink:#13243b;--muted:#52647c;--blue:#246fa2;--teal:#177d79;--line:#dce5eb;--soft:#f3f7f9;--warn:#b25c29;--red:#a43d43;--white:#fff;--paper:#f9faf9}*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:var(--ink);background:#e7edf1}body{display:flex;flex-direction:column}button{font:inherit}.deck{width:min(1440px,100%);margin:auto;flex:1;display:flex;flex-direction:column;justify-content:center;padding:20px 20px 74px}.slide{display:none;position:relative;width:100%;min-height:min(760px,calc(100vh - 113px));padding:clamp(28px,5vw,76px);background:var(--paper);border:1px solid #d6e0e7;border-radius:20px;box-shadow:0 20px 65px #1e355121;overflow:hidden}.slide.active{display:flex;flex-direction:column}.slide:before{content:"";height:7px;position:absolute;inset:0 0 auto;background:linear-gradient(90deg,#177d79 0%,#246fa2 63%,#b3d6dc 100%)}.kicker{font-size:13px;text-transform:uppercase;letter-spacing:.16em;font-weight:800;color:var(--teal);margin-bottom:18px}.eyebrow{font-size:15px;color:var(--muted);margin-top:8px}.title{font-size:clamp(36px,4.4vw,65px);line-height:1.06;letter-spacing:-.048em;font-weight:780;margin:0 0 18px}.slide h2{font-size:clamp(30px,3.35vw,48px);letter-spacing:-.04em;line-height:1.1;margin:0 0 15px}.lead{font-size:clamp(17px,1.65vw,23px);line-height:1.47;color:#34485e;max-width:1040px;margin:0 0 26px}.sub{font-size:16px;line-height:1.48;color:var(--muted)}.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.cols.three{grid-template-columns:repeat(3,minmax(0,1fr))}.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px}.card h3{font-size:20px;letter-spacing:-.025em;margin:0 0 9px}.card p{margin:0;color:var(--muted);line-height:1.5;font-size:16px}.card strong{color:var(--ink)}.stat{font-size:clamp(36px,4vw,58px);font-weight:800;letter-spacing:-.05em;line-height:1.03;margin:8px 0 11px}.metricnote{font-size:14px;line-height:1.42;color:var(--muted)}.chip{display:inline-block;padding:6px 11px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.05em;background:#e7f3f1;color:#0b7269}.chip.red{color:#9b3338;background:#fbe9e7}.chip.amber{color:#92501e;background:#fff1df}.chip.neutral{color:#415e73;background:#edf2f6}.bar{display:flex;height:20px;border-radius:999px;overflow:hidden;background:#dbe4e9}.bar>div{height:100%}.row{display:flex;align-items:center;justify-content:space-between;gap:12px}.line{height:1px;background:var(--line);margin:22px 0}.bullet{margin:0;padding-left:22px;line-height:1.55;font-size:17px;color:#34485e}.bullet li{margin:9px 0}.quote{font-size:clamp(24px,2.65vw,38px);font-weight:700;line-height:1.36;letter-spacing:-.025em;border-left:5px solid var(--teal);padding-left:22px;max-width:1020px}.data-table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:15px}.data-table th{text-align:left;font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);background:#edf3f6}.data-table td,.data-table th{padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top}.data-table tr:last-child td{border-bottom:0}.small{font-size:13px;color:var(--muted);line-height:1.4}.foot{margin-top:auto;padding-top:19px;font-size:11px;line-height:1.45;color:#657587}.foot a{color:#2b658d}.muted{color:var(--muted)}.accent{color:var(--teal)}.redtext{color:var(--red)}.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.timeline .card{border-top:5px solid var(--blue)}.callout{background:#e9f3f4;border-left:4px solid var(--teal);padding:19px 22px;border-radius:8px;color:#224658;font-size:18px;line-height:1.43}.pillrow{display:flex;gap:9px;flex-wrap:wrap}.pillrow span{border:1px solid #cfdfe5;padding:8px 12px;border-radius:999px;font-size:14px;color:#33485b;background:white}.nav{position:fixed;bottom:0;left:0;right:0;display:flex;align-items:center;justify-content:center;gap:16px;padding:12px;background:#f8fafbec;border-top:1px solid #d6e0e6;backdrop-filter:blur(12px);z-index:5}.nav button{background:var(--ink);border:0;color:white;padding:10px 17px;border-radius:9px;cursor:pointer;font-weight:700}.nav button:disabled{opacity:.3;cursor:default}.nav .count{min-width:90px;text-align:center;font-size:14px;color:#465970}.nav .label{color:#465970;font-size:12px}.progress{position:absolute;bottom:0;left:0;height:4px;background:var(--teal);transition:width .2s}.topright{position:absolute;top:36px;right:60px;color:#74909c;font-size:12px;letter-spacing:.08em}.emphasis{background:#14263f;color:#fff;border-radius:17px;padding:26px}.emphasis p{color:#cce0eb}.emphasis .stat{color:#fff}a{color:#245f8b;text-decoration-thickness:1px;text-underline-offset:3px}.source-links{display:grid;grid-template-columns:repeat(2,1fr);gap:8px 25px;font-size:15px}.source-links a{line-height:1.7}.spacer{height:18px}.big-hold{display:inline-flex;align-items:center;gap:10px;color:#a13a42;background:#fae8e8;border:1px solid #eed0d0;padding:10px 15px;border-radius:100px;font-size:14px;font-weight:850;letter-spacing:.08em;margin-bottom:18px}@media(max-width:800px){.slide{min-height:calc(100vh - 90px);border-radius:0;padding:32px 24px 70px}.deck{padding:0 0 55px}.cols,.cols.three,.timeline,.source-links{grid-template-columns:1fr}.topright{display:none}.card{padding:17px}.data-table{font-size:13px}.data-table td,.data-table th{padding:8px}.title{font-size:38px}.lead{font-size:18px}.nav .label{display:none}}@media print{body{background:white}.deck{display:block;width:100%;padding:0;margin:0}.slide,.slide.active{display:flex;min-height:7.5in;height:7.5in;max-height:7.5in;page-break-after:always;break-after:page;box-shadow:none;border-radius:0;border:0;padding:40px 58px}.nav{display:none}a{color:#245f8b}.title{font-size:50px}.slide h2{font-size:39px}.foot{font-size:10px}}
+</style>
 </head>
 <body>
-  <div class="card">
-    <h1>Replace this file with your generated pitch deck.</h1>
-    <p>This is a placeholder. In <strong>Module 6</strong>, use the <em>Final Pitch Prompt Generator</em> to assemble every M1–M5 artifact plus your Ship/Hold memo into a single prompt, paste it into ChatGPT / Claude / Gemini, and save the returned HTML deck here as <code>06-culture/lab-2-final-pitch.html</code>.</p>
-    <p>Then submit this deck plus your repo URL to the learning platform within 7 days of your cohort ending.</p>
-  </div>
-</body>
-</html>
+<main class="deck" id="deck" aria-label="RoleSignal AI Evals capstone slides">
+<section class="slide active" data-title="Decision">
+ <div class="kicker">Product School · AI Evaluations capstone · November 10, 2026</div>
+ <div class="big-hold">● HOLD · NEXT BROAD MATCHING RELEASE</div>
+ <h1 class="title">Build career discovery.<br><span class="accent">Earn the right to scale it.</span></h1>
+ <p class="lead">RoleSignal helps experienced professionals find overlooked career opportunities. Its next broad matching release should wait until mandatory-credential eligibility is protected by a validated blocking evaluation.</p>
+ <div class="cols three" style="margin-top:22px">
+  <div class="card"><div class="stat">17/20</div><p>Human-reviewed cases passed; three overconfident fit recommendations were confirmed.</p></div>
+  <div class="card"><div class="stat">8/8</div><p>Newer scenario checks reported passing, without proving the full P0 release gate.</p></div>
+  <div class="card emphasis"><div class="stat">P0</div><p>Unverified mandatory credential led to a STRONG MATCH in D03.</p></div>
+ </div>
+ <div class="foot">RoleSignal Product Owner · This is a decision about the next broad matching-change release, not a shutdown of the existing product. Sources: M2 audit, M5 coverage matrix, M6 decision memo.</div>
+</section>
+<section class="slide" data-title="Promise">
+ <div class="kicker">01 / Strategy</div><h2>The product promise sets the evaluation standard.</h2>
+ <p class="lead">Career-fit intelligence that recognizes transferable experience without treating unverified qualifications as established facts.</p>
+ <div class="cols three">
+  <div class="card"><span class="chip">Trust metric 01</span><h3 style="margin-top:18px">Transferable Skill Recognition</h3><p>Find relevant expertise even when a candidate's prior title or industry differs from the target role.</p></div>
+  <div class="card"><span class="chip">Trust metric 02</span><h3 style="margin-top:18px">Evidence-Grounded Fit Explanations</h3><p>Every material fit claim should trace to candidate evidence and job requirements.</p></div>
+  <div class="card"><span class="chip">Trust metric 03</span><h3 style="margin-top:18px">High-Fit Recommendation Precision</h3><p>Reserve the strongest recommendations for opportunities that actually meet fit criteria.</p></div>
+ </div>
+ <div class="callout" style="margin-top:23px"><strong>Strategic trade-off:</strong> Keep unconventional paths visible as <strong>EXPLORATORY</strong> when evidence is incomplete; do not inflate the <strong>STRONG MATCH</strong> label.</div>
+ <div class="foot">Source: <a href="../01-evaluation-strategy/strategy-canvas.md">M1 Strategy Canvas</a>.</div>
+</section>
+<section class="slide" data-title="Failures">
+ <div class="kicker">02 / Failure discovery</div><h2>Three failures. One recurring mechanism.</h2>
+ <div class="cols" style="align-items:stretch">
+  <div class="card emphasis"><div class="small" style="color:#c7d9e7">Human-reviewed RoleSignal audit</div><div class="stat">15%</div><p>3 of 20 confirmed failures, after the learner's T01 override.</p><div class="bar" style="margin:22px 0 9px"><div style="width:85%;background:#248779"></div><div style="width:15%;background:#d07072"></div></div><div class="row" style="font-size:13px;color:#cee2ed"><span>17 PASS · 85%</span><span>3 FAIL · 15%</span></div></div>
+  <div class="card"><span class="chip red">D03 · P0</span><h3 style="margin-top:13px">Mandatory RN licensure unverified</h3><p>ICU Charge Nurse was labeled STRONG MATCH despite missing verification of an active RN license.</p><div class="line"></div><span class="chip amber">D01 · P1</span><p style="margin-top:9px">Senior AML manager recommendation overstated unverified people-management scope.</p><div class="line"></div><span class="chip amber">T05 · P1</span><p style="margin-top:9px">Healthcare implementation recommendation overstated unverified training and rollout duties.</p></div>
+ </div>
+ <div class="callout" style="margin-top:18px">These were <strong>overconfident fit labels despite acknowledged uncertainty</strong>, not fabricated professional credentials. Each distinct failure was 1/20; the common mechanism was 3/20.</div>
+ <div class="foot">Sources: <a href="../02-failure-discovery/audit-log.md">M2 Failure Audit</a> · <a href="../02-failure-discovery/failure-taxonomy.md">M2 Taxonomy</a>. Manual GPT-family review with human override, not independent production metrics.</div>
+</section>
+<section class="slide" data-title="P0 evaluator">
+ <div class="kicker">03 / Evaluation architecture</div><h2>A stronger label needs a stronger rule.</h2>
+ <p class="lead">D03 proved why checking for fabricated claims alone is not enough.</p>
+ <div class="timeline">
+  <div class="card"><span class="chip neutral">Layer 1 · Claim checker</span><div class="stat redtext">0</div><h3>Missed</h3><p>The model never falsely claimed the candidate had an active license, so the simplistic unsupported-claim check did not fire.</p></div>
+  <div class="card"><span class="chip">Layer 2 · Eligibility gate</span><div class="stat accent">1</div><h3>Caught D03</h3><p>Required license + no verification + STRONG MATCH triggered a deterministic conflict.</p></div>
+  <div class="card"><span class="chip neutral">Layer 3 · Semantic judge</span><div class="stat">N/A</div><h3>Not run</h3><p>No API credits were available for a live judge; no live verdict is claimed.</p></div>
+ </div>
+ <div class="callout" style="margin-top:22px"><strong>Proposed contract:</strong> if a mandatory credential is not verified, do not issue STRONG MATCH. Show EXPLORATORY / Verification Needed and preserve demonstrated strengths.</div>
+ <div class="foot">Sources: <a href="../03-eval-suites/lab-1-eval-suite.md">M3 Three-layer Test</a> · <a href="../03-eval-suites/lab-2-eval-spec.md">M3 D03 Eval Specification</a>. Scores use 1 = failure caught, 0 = missed. Single-case prototype, not a deployed control.</div>
+</section>
+<section class="slide" data-title="Judge calibration">
+ <div class="kicker">03 / Calibrating judgment</div><h2>Fluent does not mean grounded.</h2>
+ <div class="cols">
+  <div class="card"><div class="small">Course baked-in demo judge</div><div class="stat">κ = 0.67</div><p>Passes the course calibration bar of κ ≥ 0.60.</p><div class="line"></div><div class="stat" style="font-size:36px">10 / 12</div><p>Agreements with human labels. Disagreements: C09 and C10.</p></div>
+  <div class="card"><h3>Rubric change: grounding over fluency</h3><ul class="bullet"><li>Verify material claims individually against sources.</li><li>Do not penalize length when a response is grounded.</li><li>Fail material eligibility or business claims with no source support.</li><li>Do not reward persuasive wording for unsupported conclusions.</li></ul></div>
+ </div>
+ <div class="callout" style="margin-top:22px">A manually corrected-label illustration yielded κ = 1.00, but <strong>no revised independent judge was actually rerun</strong>. The measured baseline remains the demo κ = 0.67.</div>
+ <div class="foot">Source: <a href="../03-eval-suites/lab-judge-calibration.md">M3 Judge Calibration</a>. This is the course's Cortex grounding exercise, not RoleSignal production judge performance.</div>
+</section>
+<section class="slide" data-title="Release gates">
+ <div class="kicker">04 / Release governance</div><h2>Different risks need different gates.</h2>
+ <table class="data-table">
+  <thead><tr><th>Failure</th><th>Severity & location</th><th>Approved release criterion</th><th>Consequence</th></tr></thead>
+  <tbody>
+   <tr><td><strong>D03</strong><br><span class="small">Mandatory credential</span></td><td><span class="chip red">Hard · PR</span></td><td>100% catch of known unverified / absent credential cases in the defined suite</td><td>Block merge if not met</td></tr>
+   <tr><td><strong>D01</strong><br><span class="small">Leadership confidence</span></td><td><span class="chip amber">Soft · Staging</span></td><td>≤5% overconfident leadership recommendations</td><td>Investigate; mitigate with feature flag</td></tr>
+   <tr><td><strong>T05</strong><br><span class="small">Transferable-skill confidence</span></td><td><span class="chip neutral">Advisory · Release</span></td><td>≤10% overconfident transferable recommendations</td><td>Monitor and review, not automatic block</td></tr>
+  </tbody>
+ </table>
+ <div class="cols" style="margin-top:20px">
+  <div class="card"><h3>Per-dimension blocking CI policy</h3><p>Grounding ≥90 (max −3); task completion ≥85 (max −5); tool selection ≥80 (max −5); safety ≥98 (max −1). Latency and cost are warn-only.</p></div>
+  <div class="card"><h3>Course replay: BLOCK</h3><p>Simulated PR #218 grounding fell <strong>96 → 87 (−9)</strong>, below its 90 floor and beyond the allowed 3-point regression. This is <strong>not an actual RoleSignal PR</strong>.</p></div>
+ </div>
+ <div class="foot">Sources: <a href="../04-eval-gates/lab-1-gate-map.md">M4 Gate Map</a> · <a href="../04-eval-gates/lab-2-launch-strategy.md">M4 Launch Strategy</a> · <a href="../04-eval-gates/lab-ci-gate-policy.md">M4 Simulated CI Policy</a>. All gate implementations remain proposed until validated.</div>
+</section>
+<section class="slide" data-title="Coverage">
+ <div class="kicker">05 / Scale & coverage</div><h2>Honest coverage beats an all-green dashboard.</h2>
+ <div class="cols">
+  <div class="card"><div class="row"><h3>Hallucination</h3><span class="chip amber">Partial</span></div><p>20-case manual review plus eight scenario-run passes, but no demonstrated full automated regression coverage.</p></div>
+  <div class="card"><div class="row"><h3>Latency</h3><span class="chip amber">Partial</span></div><p>Eight observed scenario durations: 6.6–16.9 seconds. No validated p95 or user-facing threshold.</p></div>
+  <div class="card"><div class="row"><h3>Bias / Fairness</h3><span class="chip red">Gap</span></div><p>Critical mitigation committed to Product and Engineering by December 15, 2026. Counterfactual test set proposed.</p></div>
+  <div class="card"><div class="row"><h3>Toxicity + Drift</h3><span class="chip red">Gaps</span></div><p>Toxicity temporarily accepted with a kill criterion; drift evaluation remains uncovered.</p></div>
+ </div>
+ <div class="callout" style="margin-top:22px"><strong>Toxicity acceptance ends if:</strong> one severe harmful-language output is confirmed, or two substantiated incidents occur within a rolling 30-day period.</div>
+ <div class="foot">Source: <a href="../05-scale/lab-1-coverage-matrix.md">M5 Coverage Matrix</a>. Three of five risk categories are gaps; two are partial. Passing scenarios do not establish the assertions they tested.</div>
+</section>
+<section class="slide" data-title="Budget">
+ <div class="kicker">05 / Resource allocation</div><h2>Fund the consequences, not the checklist.</h2>
+ <div class="cols" style="grid-template-columns:.9fr 1.1fr">
+  <div class="card emphasis"><div class="small" style="color:#c6dce6">Course quarterly budget exercise</div><div class="stat">$154,750</div><p>Allocated from a $200,000 ceiling</p><div class="line" style="background:#4b6176"></div><div class="stat" style="font-size:37px">$45,250</div><p>Unallocated capacity · 2 of 3 L3 slots used</p></div>
+  <div class="card"><table class="data-table"><thead><tr><th>Category</th><th>Level</th><th style="text-align:right">Spend</th></tr></thead><tbody>
+   <tr><td>Hallucination</td><td><strong>L3</strong></td><td style="text-align:right">$85,000</td></tr>
+   <tr><td>Bias / Fairness</td><td><strong>L3</strong></td><td style="text-align:right">$55,000</td></tr>
+   <tr><td>Context specificity</td><td>L2</td><td style="text-align:right">$7,000</td></tr>
+   <tr><td>Source attribution</td><td>L2</td><td style="text-align:right">$6,500</td></tr>
+   <tr><td>Latency</td><td>L1</td><td style="text-align:right">$1,250</td></tr>
+  </tbody></table></div>
+ </div>
+ <div class="callout" style="margin-top:20px"><strong>Defensible fallbacks:</strong> human-reviewed transferable-career set; sampled claim-to-source review; basic scenario-duration monitoring.</div>
+ <div class="foot">Source: <a href="../05-scale/lab-2-budget-crisis.md">M5 Budget Crisis</a>. All amounts are hypothetical course allocation assumptions, not RoleSignal's actual operating costs or expenditures.</div>
+</section>
+<section class="slide" data-title="Executive case">
+ <div class="kicker">06 / Executive decision</div><h2>The case for a targeted HOLD.</h2>
+ <div class="timeline">
+  <div class="card"><span class="chip red">01 · Trust</span><h3 style="margin-top:17px">Protect the meaning of STRONG MATCH.</h3><p>Three confirmed overconfident recommendations, including one P0 credential-dependent case, justify caution.</p></div>
+  <div class="card"><span class="chip amber">02 · Readiness</span><h3 style="margin-top:17px">Prove the hard gate.</h3><p>1/1 prototype D03 detection and 8/8 newer scenario passes do not establish a deployed 100%-catch regression gate.</p></div>
+  <div class="card"><span class="chip">03 · Continuity</span><h3 style="margin-top:17px">Keep work moving.</h3><p>Continue existing product operations, controlled tests, and remediation. Hold only the next broad matching-change expansion.</p></div>
+ </div>
+ <div class="callout" style="margin-top:21px"><strong>Business exposure:</strong> 3/20 manual evaluation failures observed; actual churn, conversion impact, delay costs, and dollars at risk <strong>not measured</strong>.</div>
+ <div class="foot">Source: <a href="lab-1-ship-hold-memo.md">M6 Ship/Hold Executive Memo</a>. Audit failure rate is not a customer churn rate or population-level estimate.</div>
+</section>
+<section class="slide" data-title="Decision request">
+ <div class="kicker">06 / What leadership must decide</div><div class="big-hold">DECISION REQUESTED · NOVEMBER 13, 2026</div>
+ <h2>Approve the HOLD.<br>Authorize the control.</h2>
+ <p class="lead">Product Leadership should hold the next broad release of matching changes and authorize Product and Engineering to implement and validate the mandatory-credential gate.</p>
+ <div class="cols">
+  <div class="card"><h3>Release evidence required</h3><ul class="bullet"><li>Versioned mandatory-credential test suite.</li><li>100% catch of labeled unverified or absent cases.</li><li>Verified-credential controls checked for overblocking.</li><li>Results, ownership, and Product sign-off documented.</li></ul></div>
+  <div class="card"><h3>What continues</h3><ul class="bullet"><li>Existing product operations.</li><li>Controlled testing and matching improvements.</li><li>Fairness evaluation mitigation plan.</li><li>Clear progress reporting until release criteria are met.</li></ul></div>
+ </div>
+ <div class="foot">November 13 is the leadership decision deadline, not an assumed completion date for remediation. Source: <a href="lab-1-ship-hold-memo.md">M6 Memo</a>.</div>
+</section>
+<section class="slide" data-title="Reflection & sources">
+ <div class="kicker">Capstone / Reflection</div><h2>“Good enough” depends on the risk.</h2>
+ <div class="quote">A high pass rate does not necessarily mean a product is ready to scale. We need to identify which failures matter most and build controls that prevent those failures without limiting RoleSignal's ability to discover unconventional career opportunities.</div>
+ <div class="line"></div>
+ <h3 style="font-size:20px;margin:0 0 12px">Submission source documents</h3>
+ <div class="source-links">
+  <a href="../01-evaluation-strategy/strategy-canvas.md">M1 · Evaluation strategy</a>
+  <a href="../02-failure-discovery/audit-log.md">M2 · Failure audit</a>
+  <a href="../03-eval-suites/lab-2-eval-spec.md">M3 · P0 evaluation specification</a>
+  <a href="../03-eval-suites/lab-judge-calibration.md">M3 · Judge calibration</a>
+  <a href="../04-eval-gates/lab-2-launch-strategy.md">M4 · Launch gate strategy</a>
+  <a href="../04-eval-gates/lab-ci-gate-policy.md">M4 · Simulated CI replay</a>
+  <a href="../05-scale/lab-1-coverage-matrix.md">M5 · Coverage matrix</a>
+  <a href="../05-scale/lab-2-budget-crisis.md">M5 · Budget decision</a>
+  <a href="lab-1-ship-hold-memo.md">M6 · Executive Ship/Hold memo</a>
+ </div>
+ <div class="foot">Prepared for the Product School AI Evals capstone · RoleSignal Product Owner · November 10, 2026. User-reviewed decisions carried forward from M1–M6; observational, prototype, proposed, and course-simulated results distinguished throughout.</div>
+</section>
+</main>
+<nav class="nav" aria-label="Slide navigation">
+ <button type="button" id="prev" aria-label="Previous slide">← Back</button>
+ <span class="count" id="count" aria-live="polite">1 / 11</span>
+ <button type="button" id="next" aria-label="Next slide">Next →</button>
+ <span class="label">← → keys · Home/End · Print to PDF</span>
+ <span class="progress" id="progress" aria-hidden="true" style="width:9%"></span>
+</nav>
+<script>
+(function(){
+ const slides=[...document.querySelectorAll('.slide')],counter=document.getElementById('count'),prev=document.getElementById('prev'),next=document.getElementById('next'),progress=document.getElementById('progress');
+ let index=0;
+ function show(n){index=Math.min(slides.length-1,Math.max(0,n));slides.forEach((slide,i)=>{slide.classList.toggle('active',i===index);slide.setAttribute('aria-hidden',String(i!==index))});counter.textContent=(index+1)+' / '+slides.length;prev.disabled=index===0;next.disabled=index===slides.length-1;progress.style.width=(100*(index+1)/slides.length)+'%';document.title='RoleSignal | '+slides[index].dataset.title+' | AI Evals Capstone';history.replaceState(null,'','#slide-'+(index+1))}
+ prev.addEventListener('click',()=>show(index-1));next.addEventListener('click',()=>show(index+1));document.addEventListener('keydown',e=>{if(e.target.closest('button,input,textarea,select'))return;if(e.key==='ArrowRight'||e.key==='PageDown'||e.key===' '){e.preventDefault();show(index+1)}if(e.key==='ArrowLeft'||e.key==='PageUp'){e.preventDefault();show(index-1)}if(e.key==='Home'){show(0)}if(e.key==='End'){show(slides.length-1)}});const requested=Number((location.hash.match(/^#slide-(\d+)$/)||[])[1]);show(Number.isInteger(requested)&&requested>0?requested-1:0)
+})();
+</script>
+</body></html>
