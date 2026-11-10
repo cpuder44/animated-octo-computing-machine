@@ -28,6 +28,18 @@
 
 ## Fallback methods (non-Level 3 items)
 
-### L_n_ · _Failure name_ (_metric_ · _risk_)
-- **Method:** _the cheaper fallback you'll run instead of L3_
-- **Why this fallback is defensible:** _the story you could defend in a customer incident review — especially if you downgraded a P0/P1._
+The three non-L3 categories below retain focused, cheaper checks. These are **approved fallback approaches**, not a claim that all monitoring workflows are already deployed.
+
+### L2 · Context Specificity (Transferable Skill Recognition / UX Trust · P1)
+- **Method:** Maintain a **human-reviewed transferable-career regression set** covering unconventional transitions and roles where relevant experience is not reflected in familiar titles. Compare candidate evidence, job requirements, RoleSignal's fit label, and explanation to expert-approved references. Include cases where transferability is plausible but a material requirement remains unverified. Record mismatches and re-test known failures after matching changes.
+- **Why this fallback is defensible:** In a customer incident review, we could show that we deliberately tested the product's central career-discovery promise against labeled examples rather than treating keyword or title similarity as the standard. L2 does **not** offer comprehensive coverage, so recurring missed transferable skills or unjustified strong matches would justify escalation and additional investment.
+
+### L2 · Source Attribution Failure (Evidence-Grounded Fit Explanations / Robustness · P1)
+- **Method:** Perform **sampled manual claim-to-source verification** of fit recommendations, comparing material claims in the output with the specific candidate-profile and job-requirement evidence. Document unsupported claims and incorrect confidence labels, and add confirmed errors to future regression samples. Prioritize claims involving mandatory credentials and senior-role prerequisites.
+- **Why this fallback is defensible:** For a customer incident, reviewers could inspect the actual supporting sources and trace how a recommendation was justified or overstated. The separate L3 Hallucination allocation prioritizes RoleSignal's P0 credential failure, while sampled attribution review adds an independent, less expensive check. Sampling cannot guarantee every unsupported claim is found; confirmed serious failures must trigger investigation rather than being dismissed because this category is L2.
+
+### L1 · Cost Overruns / Latency (Latency · P3)
+- **Method:** Use **scenario-run duration monitoring against the observed baseline** from the learner's November 6, 2026 screenshot (eight recorded runs ranging from **6.6 to 16.9 seconds**). Keep a simple dated log of subsequent scenario timings and examine conspicuous slowdowns or changes by scenario type. Do **not** label any single duration as a threshold violation: no user-facing latency target or validated p95 baseline has yet been established.
+- **Why this fallback is defensible:** The learner's stated rationale is: “The current evidence demonstrates timing measurement but doesn't yet establish a user-facing performance threshold. Basic monitoring provides visibility while budget is concentrated on higher-impact trust risks.” In an incident review, we could present observed timings and any follow-up rather than claim an unimplemented latency SLA. A repeated user-impacting slowdown would prompt re-prioritization and development of a defined threshold.
+
+**Learner-approved methods:** Context Specificity = human-reviewed transferable-career regression set; Source Attribution = sampled manual claim-to-source verification; Latency = scenario-run duration monitoring against the observed baseline. **Budget remains $154,750 with 2 L3 slots**, leaving $45,250 unallocated. Any stronger evaluation level requires a future, explicit allocation decision.
