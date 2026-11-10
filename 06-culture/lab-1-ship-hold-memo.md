@@ -50,12 +50,20 @@ This is a **HOLD on the next broad release of matching changes**, not a recommen
 
 ## Business Risk
 
-_Quantified SHIP-path vs HOLD-path risk (revenue, churn, competitive window)._
+**SHIP path: known trust exposure.** In the Module 2 human-reviewed, 20-scenario audit, **3/20 (15%)** recommendations failed, including the **P0 D03** STRONG MATCH despite unverified mandatory RN licensure. The adapted deterministic eligibility check caught D03 in **1/1** prototype case, but the proposed **100% catch rate across the defined mandatory-credential regression suite** has **not** been validated as a deployed PR gate. Expanding matching changes before that validation risks misleading users about eligibility, damaging confidence in recommendations and potentially causing user abandonment. **No measured churn, lost conversion, or dollar exposure is available**, and the 15% audit failure share must not be interpreted as a customer-impact or churn rate.
+
+**HOLD path: delivery and opportunity cost.** A targeted HOLD delays the next broad release of matching changes and the potential user benefits of those changes, while Product and Engineering conduct gate validation. The existing product, remediation and controlled tests may continue. The number of delayed users, duration of the hold, resulting revenue impact, and competitive-window costs have **not** been measured. The **8/8 passing scenarios** are encouraging but do not demonstrate enforcement of the required P0 regression gate.
+
+**Business decision:** Prioritize containing a confirmed high-severity trust risk over an unquantified near-term release benefit. Do not treat the course's simulated PR #218 block or the Module 5 hypothetical **$154,750 evaluation allocation** as actual RoleSignal production incidents or expenditure.
 
 ## Next Step · Decision Needed
 
-_A specific decision request with a deadline — e.g. "Approve the Hold rollback by Friday to keep the Q3 launch window."_
+**By November 13, 2026, Product Leadership should approve the targeted HOLD on the next broad release of RoleSignal matching changes and authorize the Product owner and Engineering to implement and validate the mandatory-credential regression gate.** Before broad rollout resumes, require documented evidence that the Hard PR control catches **100% of the known unverified/absent mandatory-credential regression cases in the defined suite**, with verified-credential controls reviewed for overblocking; record the test dataset, results, failures, owners, and the release sign-off. Continue controlled evaluation and existing product operations during the HOLD. **November 13 is the leadership decision deadline, not a claim that remediation will be completed by that date.**
 
 ## Reflection
 
-_What defining "good enough" forced you to confront._
+“A high pass rate does not necessarily mean a product is ready to scale. We need to identify which failures matter most and build controls that prevent those failures without limiting RoleSignal's ability to discover unconventional career opportunities.”
+
+**Product lesson:** “Good enough” is risk-dependent. A useful exploratory recommendation can acknowledge uncertainty; a STRONG MATCH for a role requiring an unverified mandatory credential needs a harder eligibility constraint. A passing scenario count alone cannot establish release readiness without testing the high-consequence failure mode.
+
+**Learner-approved Step 4 choices:** Present observed **3/20** failures and explicitly state that financial impact is unmeasured; request a targeted HOLD and P0 gate validation, with a leadership decision by **November 13, 2026**. The quoted reflection above is the learner's own wording.
